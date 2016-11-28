@@ -30,7 +30,7 @@ def files_upload():
         Nothing
     """
     global x
-    upload_json_obj = urllib.request.urlopen("https://slack.com/api/files.upload?token=xoxp-108182559271-107571848180-107582841189-7223d14e2041350f81ad1f2238d525be&content=C:\\Users\\Franklin\\Desktop\\blackpane.png&filename=planepic&pretty=1")
+    upload_json_obj = urllib.request.urlopen("https://slack.com/api/files.upload?token=(token_number_goes_here_without_parentheses)&content=C:\\Users\\Franklin\\Desktop\\blackpane.png&filename=planepic&pretty=1")
     upload_data = json.load(reader(upload_json_obj))
     #print(upload_data)
     x = upload_data["file"]["id"]
@@ -84,7 +84,7 @@ def files_list():
     """
     print("Please wait momentarily while the program gives the file.list server time to update")
     time.sleep(30)
-    json_obj = urllib.request.urlopen("https://slack.com/api/files.list?token=xoxp-108182559271-107571848180-107582841189-7223d14e2041350f81ad1f2238d525be&pretty=1")
+    json_obj = urllib.request.urlopen("https://slack.com/api/files.list?token=(token_number_goes_here_without_parentheses)&pretty=1")
     list_data = json.load(reader(json_obj))
     if list_data["files"][0]["id"] == x:
         print("The file you uploaded is properly listed in the response with the correct ID")
@@ -108,13 +108,13 @@ def files_delete():
     Returns:
         Nothing
     """
-    files_delete = {"file" : x , "token" : "xoxp-108182559271-107571848180-107582841189-7223d14e2041350f81ad1f2238d525be"}
+    files_delete = {"file" : x , "token" : "(token_number_goes_here_without_parentheses)"}
     files_delete_request = requests.delete("https://slack.com/api/files.delete", params=files_delete)
     if "true" in files_delete_request.text:
         print("The file you uploaded was sucsessfully deleted")
     else:
         print("The file you uploaded wasnt sucsessfully deleted")
-    files_delete_false_file_request_params = {"file" : "012345" , "token" : "xoxp-108182559271-107571848180-107582841189-7223d14e2041350f81ad1f2238d525be"}
+    files_delete_false_file_request_params = {"file" : "012345" , "token" : "(token_number_goes_here_without_parentheses)"}
     files_delete_false_file_request = requests.delete("https://slack.com/api/files.delete", params=files_delete_false_file_request_params)
     if "file_not_found" in files_delete_false_file_request.text:
         print("You attempted to delete a file that dosent exist")
