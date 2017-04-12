@@ -1,5 +1,13 @@
 // Franklin Smith
 // Project 1
+//a Java program that calculates the sum of a list of positive integers entered by the user.
+//You will repeatedly prompt the user to enter an integer and use special integer values to
+//determine when to print the sum, clear the sum, and quit the application. Your program
+//should:
+//1. [10] Display text asking the user to enter an integer. You should indicate to the user that
+//entering -3 will print the current sum, -2 will reset the sum to 0, and -1 will quit the application.
+//For example:
+//Enter a positive integer (-3 to print, -2 to reset, -1 to quit):
 
 import java.util.Scanner; //program uses class Scanner
 
