@@ -1,5 +1,28 @@
 //Franklin Smith
+/*
+1.	I wrote a java program that prompts the user for an integer array length and a double-precision array density.
+I used it to create the arrays for experiement. I caught exceptions due to user entering unparsable input and prompting them
+to reenter the value(s).
+I also prompted the user to reenter the values if theyre outside of expected range.
 
+2.	This is a method that takes an int length and a double array ensity and returns an array of type int.
+
+3.	This method takes an int length and an array density of type double as arguments and returns a new Array list which
+represents a sparse array.
+
+4. 	This Method takes a dense array as an argument and returns a new equivalent sparse array.
+
+5. 	This method takes a sparse array and an integer length as arguments and returns a new equivalent dens array.
+
+6. 	This method takes a sparse array as an argument and prints max value in the array, along with the original index value in the array.
+
+7. 	This method uses the system.nanoTime() method to reord amount of time taken to run each of the above methods.
+
+
+
+
+
+*/
 import java.util.Scanner; //program uses class Scanner
 
 public class Project_2 {
