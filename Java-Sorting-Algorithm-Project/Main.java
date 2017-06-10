@@ -9,6 +9,40 @@ import java.util.concurrent.TimeUnit;
 import java.io.*;
 import java.util.*;
 
+/*
+The goal of this assignment was to provide me experience with reading data from a file, 
+writing data into a file, sorting data using Selection Sort and Merge Sort, and evaluating
+the efficiency of the two sorting algorithms. 
+
+I wrote a Java program to read all the data from the file into an ArrayList of 
+phonebook entries, where each entry consists of separate fields for the name and phone 
+number (e.g., a class with private String variables would be considered good). The file 
+is a plain text file, where every line has the following format: "PhoneNumber LastName, FirstName". 
+
+I Implemented a method that takes an ArrayList of phonebook entries and a String as 
+inputs, and output all the phonebook entries which contain this input String in either the 
+first name or the last name into another plain text file named "Output.txt" in the same 
+directory as my Java program. Every line of this file should follow the same format as
+above. 
+
+For example, if the input String is "new", then the following should be the content of my "Output.txt": 
+754270500 Eh, Ainew 592030468 Fannew, Ouf 880526690 Wounoot, 
+Onew 752360287 Bussok, Neinnew 865147504 Eipysh, 
+Wainnew 213798053 Anouh, Annew 682280707 Cheifoh, 
+Ainew 607750213 Zeivam, Onew 317288872 Faunt, Dinnew 
+If the input String is not contained by any name, then my "Output.txt" is an empty file. 
+
+I Implemented a method that takes an ArrayList of phonebook entries as an argument and
+returns a sorted copy of the list using Selection Sort to sort alphabetically by phonebook last name. 
+My implementation must not modify the input list. I should implement your own sorting code here,
+and not simply use the Collections sort method.
+
+I Implemented a method that takes an ArrayList of phonebook entries as an argument and returns
+a sorted copy of the list using Merge Sort to sort alphabetically by phonebook last name. 
+My implementation must not modify the input list. Again, I should implement your own sorting code here, 
+and not simply use the Collections sort method. 
+*/
+
 public class Main {
 
 	public static void main(String[] args){
