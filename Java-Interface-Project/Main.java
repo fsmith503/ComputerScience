@@ -1,6 +1,44 @@
 //Franklin Smith
 //CIS 212 PROJECT 3
+/*
+For this project, i implemented a hierarchy of java classes that shared
+a common interface. I then created a data structure using this interface type
+and populated it with various instances of classes inheriting from the interface.
 
+I implemented a enw interface named Measureable with a single method named 
+getArea() which takes no arguments and returns a double.
+
+I implemented a new class named rectangle that implements Measureable. I 
+provided a class constructor which takes arguments appropriate for creating
+a 2D rectangel and implements the getArea() method to return the area of the
+rectangle.
+
+I implemented a new class named Box that extends Rectangle. I provided a class
+constructor which takes arguments appropriate for creading a 3D box and implements
+the getArea() method to return the total surface area of the box.
+
+I implemented a new class named circle that implements measurable. I provided
+a class constructor which takes arguments appropriate for creating a 2D circle
+and I implemented the getArea() method to return the area of the circle.
+
+I implemented a new class named Sphere that extends Circle. I provided a class
+constructor which takes arguments appropriate for creating a 3D sphere and 
+implemented the getArea() method to return the surface area of the sphere.
+
+I implemented a new class named Main with a public static main() mehtod and
+private static nextDoube() and calculateSum() Methods:
+
+The nextDboue() method shoudl simply return a doubel on the range (0.0, 1.0]
+the calculateSum() method should take an arrayList of type measureable as an
+argument and return the sum of all areas in the list.
+The main() method should create an ArayList of type Measureable and populate 
+that list with 1000 random instances of my measureable classes from parts 2-5.
+There is a 25% of that each instance is one of the four classes.
+I use the nextDouble() method to generate random dimensions to pass into the 
+Measurable constructors. I track the number of instances of each class created
+and I print the results.
+Finally i called the calcualteSum() method and print the result.
+*/
 
 import java.util.ArrayList;
 import java.util.Random;
