@@ -2,8 +2,38 @@
 eqanalysis.py: analyze and plot earthquake data
 Authors: Franklin Smith
 Credits: Hannah Minns, Brian Gravelle, Roscoe Cacita
-
 CIS 210 assignment 7, Fall 2016
+
+As we discussed in lecture, there is a rapid increase in the amount of 
+published data in the world; some say the growth is exponential. Data analytics
+is the science of examining raw data with the purpose of drawing conclusions about
+(inferring information from) the raw data. Data analysis is the process of inspecting,
+cleaning, transforming, and modeling data with the goal of discovering useful information.
+We discussed several central tendency measures of data, a couple of dispersion measures, 
+and frequency tables for showing some aspects of data. The purpose of this project is for 
+you to apply these measures, and to use turtle graphics for plotting the raw data, to 
+assist an analyst in understanding earthquake data here in the Pacific Northwest.
+
+The program will be executed as follows from the command or terminal window:
+$ python3 eqanalysis.py file.csv plot clusters
+$ python3 eqanalysis.py file.csv plot magnitudes
+$ python3 eqanalysis.py file.csv plot depths
+$ python3 eqanalysis.py file.csv analyze clusters
+$ python3 eqanalysis.py file.csv analyze magnitudes
+$ python3 eqanalysis.py file.csv analyze depths
+
+The first three will generate dot plots on a turtle graphics window, 
+while the last three will display mean, median, standard deviation, and
+frequency table information on the standard output; for cluster analysis, 
+the mean, median, and standard deviation information is shown for each cluster.
+
+Examples using EqData01.csv
+$ python3 eqanalysis.py EqData01.csv plot magnitudes
+$ python3 eqanalysis.py EqData01.csv plot depths
+$ python3 eqanalysis.py EqData01.csv plot clusters
+$ python3 eqanalysis.py EqData01.csv analyze magnitudes
+$ python3 eqanalysis.py EqData01.csv analyze depths
+$ python3 eqanalysis.py EqData01.csv analyze clusters
 """
 
 # a set of modules that we need to use in the code below
