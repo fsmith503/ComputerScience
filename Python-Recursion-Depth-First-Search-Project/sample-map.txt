@@ -1,0 +1,13 @@
+#
+# This sample map corresponds to the diagrams in the project description
+# on the course web page. 
+# M Young, October 2013
+# 
+a,b,5
+a,c,8
+b,d,6
+c,d,2
+d,e,12
+d,f,2
+e,g,3
+f,g,7

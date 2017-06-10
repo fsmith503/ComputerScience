@@ -1,0 +1,39 @@
+# Based on http://www.theoriginalseries.com/traveltimes.htm
+# From,To,Hours (min)
+Ithilian Crossroads,Crossings of Poros,48
+Ithilian Crossroads,North Border Ithilien,24
+Edoras,Isengard,48
+Emen Arnen,Ithilian Crossroads,4.5
+Minis Tirith,Cair Andros,5
+Minis Tirith,Edoras,96
+Minis Tirith,Barad-Dur,36
+Minis Tirith,Emyn Arnen,2
+Minis Tirith,Henneth Annun,6
+Minis Tirith,Palargir,36
+Rivendell,Delta of Greyflood,96
+Brandy Hall,Hobbiton,5
+Brandy Hall,Tuckborough,5.5
+Hobbiton,Michel Delving,5.5
+Hobbiton,Truckborough,5.5
+Truckborough,Michel Delving,5
+Tuckborough,Tookbank,0.75
+Michel Delving,Greenholm,4
+Greenholm,Tower Hills,5
+Buckland,Bree,50
+Forlond,Grey Havens,72
+Grey Havens,Tower Hills,7
+Hobbiton,Bree,192
+Bree,Tharbad,384
+Tharbad,Gap of Rohan,624
+Gap of Rohan,Edoras,264
+Edoras,Minis Tirith,673
+Mitheithel,Angle,36
+Great West Road,Edoras,120
+Edoras,Entwash,36
+Entwash,Limlight,36
+Limlight,Celebrant,24
+Celebrant,Galadhan,0.75
+Lothlorien,Edoras,120
+
+
+# Try Hobbiton to Minis Tirith
