@@ -12,6 +12,21 @@ start to end, we compute a 'shortest known distance to here from start'
 attribute for each node.  After completion of depth first search,
 destination city should be labeled with the shortest distance from
 the start city.  
+
+The input and output in the command or terminal window will look like this:
+> python3 routes.py a g sample-map.txt
+Distance from a to g is 19.0
+
+In case of a misspelled city, your program will report that it does not appear on the map:
+
+> python3 routes.py a x sample-map.txt
+Destination  x  is not on the map
+
+It can also cope with cities that are present on the map, but with no route between:
+
+> python3 routes.py a x sample-map-noreach.txt
+You can't get from a to x
+
 """
 
 
