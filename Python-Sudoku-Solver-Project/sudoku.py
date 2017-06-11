@@ -3,6 +3,10 @@ Sudoku solver.
 Author: Michal Young, 10-15 November 2012 for CIS 210
 Author: Joe Sventek, 11-13 November 2015, minor modifications
 
+terminal call
+$ python3 sudoku.py board1.txt
+
+
 Overall application control (including instantiation of 
 graphical and/or textual views of progress).
 """
