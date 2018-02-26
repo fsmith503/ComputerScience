@@ -1,0 +1,47 @@
+.pos 0
+Init:
+    irmovl Stack, %ebp  # Set up stack pointer
+    irmovl Stack, %esp  # Set up base pointer
+    call Main # Execute main program
+    halt  # Terminate program
+
+#Array of 4 elements
+    .align 4
+xp: .long 0x0001
+yp: .long 0x0002
+
+Main: pushl %ebp
+    rrmovl %esp,%ebp
+    irmovl yp, %eax
+    pushl %eax #push yp
+    irmovl xp, %edx
+    pushl %edx #push xp
+    call Swap
+    rrmovl %ebp, %esp
+    popl %ebp
+    ret
+    
+# int Swap(int *xp, int *yp)
+Swap: pushl %ebp
+    rrmovl %esp,%ebp
+    pushl %ebx
+    mrmovl 8(%ebp),%ecx
+    mrmovl 12(%ebp), %edx
+    mrmovl (%ecx), %eax
+    mrmovl (%edx), %ebx
+    rmmovl %eax, (%edx)
+    rmmovl %ebx, (%ecx)
+    #rmmovl %ebx, (%ecx)
+    #mrmovl -4(%ebp), %ebx
+    #rmmovl %ebp, %esp
+    #TODO
+    #2 mr movls 
+    #2 rm movls similar to swap in IA32
+    popl %ebp
+    ret
+
+# The stack starts here and grows to lower addresses 
+.pos 0x100
+Stack:
+
+

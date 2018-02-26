@@ -1,0 +1,14 @@
+Fectch icode:ifun <- M1[PC+1]
+	rA:rB <- M1[PC+2]
+	valC <- M4[PC+2]
+	valP <- PC + 6
+Decode valB <- R[rB]
+Execute valE <- valC + valB
+	Set CC
+Memory
+Write back R[rb] <- valE
+PC update PC <- valP
+
+
+Note:
+ 	My picture for the assignment is a PNG file
