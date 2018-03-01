@@ -18,6 +18,7 @@ class BST:
 		tempbool = True
 		new_node = Node(x)
 		if self.size == 0:
+			#print("resetting root")
 			self.root = new_node
 			self.size += 1
 			tempbool = False
@@ -27,6 +28,7 @@ class BST:
 				if current.left is None:
 					current.left = new_node
 					new_node.parent = current
+					self.size += 1
 					return
 				else:
 					current = current.left
@@ -35,6 +37,7 @@ class BST:
 				if current.right is None:
 					current.right = new_node
 					new_node.parent = current
+					self.size += 1
 					return
 				else:
 					current = current.right
@@ -60,15 +63,25 @@ class BST:
 			v.parent = u.parent
 
 	def tree_delete(self,z):
+		#print("delete attempt")
 		z = self.tree_search(self.root, z)
 		if z == None:
 			return z
 		else:
 			if z.left == None:
+				#print("z.left is none")
 				self.transplant(z,z.right)
+				if z == self.root:
+					#print("trying to replace root with node.right")
+					self.root = z.right
 			elif z.right == None:
+				#print("z.right is none")
 				self.transplant(z,z.left)
+				if z == self.root:
+					#print("trying to replace root with node.left")
+					self.root = z.left
 			else:
+				#print("both children arent none")
 				y = self.tree_minimum(z.right)
 				if y.parent != z:
 					self.transplant(y,y.right)
@@ -77,6 +90,9 @@ class BST:
 				self.transplant(z,y)
 				y.left = z.left
 				y.left.parent = y
+				if z == self.root:
+					#print("trying to replace root with y")
+					self.root = y
 			self.size = self.size - 1
 			return z			
 
@@ -157,6 +173,8 @@ def driver():
 		n = int(f.readline().strip())
 		for _ in range(n):
 			in_data = f.readline().strip().split()
+			#if _ > 0:
+				#print("Root" , binarysearchtree.root.data)
 			#print(in_data[0] + " input")
 			if in_data[0] == "insert":
 				binarysearchtree.insert(int(in_data[1]))
