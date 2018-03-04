@@ -1,0 +1,11 @@
+Franklin Smith Project 6 Solutions.txt
+
+There are going to be 3 bubbles without forwarding
+so the first and second line can accomplish writeback,
+the decode on the following line it attempting to 
+access them. The initial line requires two and the 
+requires three.
+
+In regards to forwarding one can simply access the result
+due to the fact that its located in the memory, execute,
+or writeback stages.

@@ -1,0 +1,149 @@
+
+    
+    .pos 0
+Init:
+    irmovl Stack, %ebp #sets up stack pointer
+    irmovl Stack, %esp   #sets up base pointer
+    call Main   #Executes main program
+    halt   #terminates program
+
+    .align 10 #adjust the adress
+array:
+    .long 0x0007
+    .long 0x0002
+    .long 0x0006
+    .long 0x0001
+    .long 0x0005
+    .long 0x0003
+    .long 0x0004
+    .long 0x0009
+    .long 0x0008
+    .long 0x0010
+    
+Main:   
+    pushl %ebp     #pushes ebp
+    rrmovl %esp, %ebp   #register to register movl puts esp in ebp
+    irmovl $10, %eax # immediate to register movl puts array size 10 into eax
+    pushl %eax    #pushes eax
+    irmovl array, %edx #immediate to register movl puts array into register edx
+    pushl %edx    #pushes edx
+    call sort   #calls sort
+    rrmovl %ebp, %esp   #register to register movl puts ebp into esp
+    popl %ebp
+    ret    
+    
+
+swap:   #//void swap(int *xp, int *yp)
+    pushl %ebp  #pushes ebp
+    rrmovl %esp, %ebp  #register to register movl esp into ebp
+    pushl %ebx #pushes ebx
+    mrmovl 8(%ebp), %edx  # memory to register movl first paramter into edx
+    mrmovl 12(%ebp), %ecx # memory to register movl second parameter into ecx
+    mrmovl (%edx), %ebx #memory to register movl edx into ebx
+    mrmovl (%ecx), %eax #memory to register movl ecx into eax
+    rmmovl %eax, (%edx) # register to memory movl eax into edx
+    rmmovl %ebx, (%ecx) # register to memory movle bx into ecx
+    popl %ebx  #popping ebx
+    popl %ebp  # popping ebp
+    ret #return
+
+sort:       #//void sort(int *array, int length) sort function
+    pushl %ebp #pushing ebp
+    rrmovl %esp, %ebp #register to register movl esp into ebp
+    pushl %edi  #pushing edi
+    pushl %esi  #pushing esi
+    pushl %ebx   #pushing ebx
+    #subl $12, %esp 
+    irmovl $12, %ecx #immediate to register movl 12 into ecx
+    subl %ecx, %esp #subl integer operator
+    jmp L4   #jump to L4
+
+    L2: #Start of L2 loop
+    #addl $1, %esi #adding 1 into esi
+    #pushl %edi #pushing edi register
+    pushl %ebx #pushing ebx register
+    pushl %ecx #pushing ecx register
+    irmovl $1, %ebx #immediate to register movl 1 into ebx
+    addl %ebx, %esi # adding ebx into register esi
+    #popl %edi #poping esi register
+    #cmpl %esi, %edi #comparing esi and edi register
+    #pushl %ebx #pushing ebx register
+    #pushl %ecx #Pushing ecx register
+    rrmovl %edi, %ecx #register to register movl edi into ecx
+    rrmovl %esi, %ebx #register to register movl esi into ebx
+    subl %ebx, %ecx # subl ebx into ecx
+    popl %ecx #popping ecx register
+    popl %ebx #popping ebx register
+    jl L8 #less than jumping to L8
+    
+    L3: #Start of L3 loop
+    rrmovl %ebx, %eax #register to register movl ebx into eax
+    #addl $4, %ebx # adding 4 into ebx register
+    pushl %edi #pushing the edi register
+    irmovl $4, %edi #immediate to register movl 4 into edi
+    addl %edi, %ebx #adding edi into edx register
+    popl %edi #popping edi register
+    mrmovl 4(%eax), %ecx #memory to register movl eax into ecx
+    #cmpl %ecx, (%eax) #comparing these values in X86 but Y86 doesn't have this
+    #cmpl %ecx, (%eax) #comparing these values in X86 but Y86 doesn't have this
+    pushl %edi #pushing edi register
+    pushl %esi #pushing esi register
+    rrmovl %ecx,%esi    # register to register movl ecx into esi which adds one to array
+    mrmovl (%eax),%edi  # memory to register movl eax into edi
+    subl %esi,%edi  #  subbing esi from edi result into edi
+    popl %esi # popping esi register
+    popl %edi # popping edi reigster
+    jle L2 # jump less equal to L2
+    #subl $8, %esp
+    pushl %esi #pushing esi register
+    irmovl $8, %esi #immediate to register movl 8 into esi
+    subl %esi, %esp #subl esi into esp register
+    popl %esi #popping esi register
+    pushl %ebx #pushing ebx register
+    pushl %eax #pushing eax register
+    call swap #calling swap function
+    #addl $16, %esp 
+    pushl %edi #pushing edi register
+    irmovl $16, %edi #immediate to register movl, 16 into edi
+    addl %edi, %esp #addl edi into esp 
+    popl %edi #popping edi register
+    irmovl $1, %edx #immediate to register movl 1 into edx register
+    jmp L2 #jump to L2 loop
+    
+    L8: #start of L8 loop
+    #test %edx, %edx
+    pushl %esi #pushing esi register
+    rrmovl %edx, %esi # register to register movl edx into esi
+    andl %esi, %esi #andl esi into esi
+    popl %esi #popping esi register
+    je L9 #jumping to L9 loop
+    
+    L4: #start of L4 loop
+    mrmovl 8(%ebp), %ebx #memory to register movl into ebx
+    irmovl $0, %esi # immediate to register movl 0 into esi
+    irmovl $0, %edx # immediate to register movl 0 into edx
+    mrmovl 12(%ebp), %eax # memory to register movl ebp into eax
+    irmovl $-1, %ecx #immediate to register movled -1 into ecx
+    rrmovl %eax, %edi #register to register movl eax into edi
+    addl %ecx, %edi # addl ecx register into edi register
+    #leal -1(%eax), %edi NO LEAL IN Y86 !
+    jmp L3 #jump to the L3 loop
+    
+    L9: #start of L9 loop
+    #leal -12(%ebp), %esp NO LEAL IN Y86 !
+    pushl %esi #pushing esi reigster
+    irmovl $-12, %esi # immediate to register mvol -12 into esi
+    rrmovl %ebp, %esp #register to register movl ebp into esp
+    addl %esi, %esp #addl esi into esp
+    popl %esi #popping esi register
+    popl %ebx #popping ebx pointer
+    popl %esi #popping esi pointer
+    popl %edi #popping edi register
+    popl %ebp #popping ebp reister
+    ret #return statement
+
+
+.pos 0x200  
+Stack:
+
+    
