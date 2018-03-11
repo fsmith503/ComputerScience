@@ -1,0 +1,10 @@
+franklinsmith$ gcc -g 7-1.c
+franklinsmith$ ./a.out
+
+franklinsmith$ gcc -g 7-2.c
+franklinsmith$ ./a.out
+
+franklinsmith$ gcc -g 7-2Testing.c
+franklinsmith$ ./a.out
+
+franklinsmith$ cat solutions.txt

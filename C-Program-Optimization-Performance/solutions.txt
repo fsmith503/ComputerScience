@@ -1,0 +1,28 @@
+2B.
+The operations in the loop that cant be pipelined 
+are the following:
+cmpq %rcx, %rdx
+adds %xmmo, %xmm1
+addq $1, %rdx
+
+They cant be pipelined because we have to store the variable before
+the iteration of the next loop.
+
+The there is latency for 2 operations because they depend on previous values.
+Those 2 lines are 
+adds %xmmo, %xmm1
+addq $1, %rdx
+The difference between the two is that 
+adds %xmmo, %xmm1 is float addition
+addq $1, %rdx is integer addition
+Thus, the line with float addition has a latency
+of 3 and the line with integer addition has a latency
+of 1. The "best case" latency is 3. The lower latency
+bound in terms on CPE is 3.
+
+2D.
+The loop unrolling was astronomically more efficent. As the size of the array
+increased both of the running times increased but inner always had a larger 
+running time than inner2. As we can see on the graph when the array size
+is greater than or equal to 70,000 elements, this is the point where inner
+starts to grow astronomically larger than inner2.
