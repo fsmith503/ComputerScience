@@ -1,0 +1,5 @@
+python ExpressionEvaluator.py test1.input
+python ExpressionEvaluator.py test2.input
+python ExpressionEvaluator.py test3.input
+python ExpressionEvaluator.py test4.input
+
