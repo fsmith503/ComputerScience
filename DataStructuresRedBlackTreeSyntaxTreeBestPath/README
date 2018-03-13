@@ -2,6 +2,21 @@ README
 
 Franklin Smith
 
-Problem1: python problem1.py problem1.input
-Problem2: python problem2.py problem2.input
-Problem3: python problem3.py problem3.input
+$ python problem1.py problem1.input
+$ python problem2.py problem2.input
+$ python problem3.py problem3.input
+$ python problem1.py problem1.input>result1
+$ python problem2.py problem2.input>result2
+$ python problem3.py problem3.input>result3
+$ diff result1 problem1.output
+$ diff result2 problem2.output
+$ diff result3 problem3.output
+$ python problem1.py test1_medium.input
+$ python problem2.py test2_medium.input
+$ python problem3.py test3_medium.input
+$ python problem1.py test1_medium.input>testresult1
+$ python problem2.py test2_medium.input>testresult2
+$ python problem3.py test3_medium.input>testresult3
+$ diff testresult1 test1_medium.output
+$ diff testresult2 test2_medium.output
+$ diff testresult3 test3_medium.output
