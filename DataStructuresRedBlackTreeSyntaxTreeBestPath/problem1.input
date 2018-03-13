@@ -1,0 +1,12 @@
+11
+insert 40
+insert 5
+insert 4
+insert -5
+insert 25
+insert 15
+insert 33
+insert 55
+bpv
+remove 15
+bpv
