@@ -1,0 +1,16 @@
+Franklin Smith solutions.txt CIS314 Assignment 8
+
+A. What is the total number of memory writes? It may help to think in terms of movl instructions.
+ 
+ The number of memory writes is 4*16*16. This is because there are 4 writes in the for loop, the inner for
+ loop is executed 16 times. The outer loop is executed 16 times. Thus we have 4*16*16 memory writes which is
+ 1024.
+
+B. What is the total number of memory writes that miss in the cache?
+ 
+ we have 1024 writes and the miss rate is 1 in every 8 so we divide
+ 1024/8 to get which gives us 128
+
+C. What is the miss rate?
+
+1 in every 8
