@@ -1,0 +1,10 @@
+1. Download the python file in your Desktop
+2. Open computer terminal
+3. Terminal command: $ cd Desktop
+4. Verify file is there Terminal command: $ ls
+5. Execute Terminal command: $python Eulers.py
+6. Grab popcorn, sit back and watch the show
+
+$cd Desktop
+$ls
+$python Eulers.py
