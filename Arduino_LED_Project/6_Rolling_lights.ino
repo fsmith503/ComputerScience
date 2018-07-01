@@ -16,6 +16,18 @@ int LEDL2 = 4;
 int LEDL1 = 3;
 int loopspeed = 1;
 
+//int rand () {
+//   //int i, n;
+//   //int time_t = t;
+//   //n = 1;
+//   /* Intializes random number generator */
+//   //srand((unsigned) time(&t));
+//   int result = ("%d\n", rand() % 12);
+//   //return(result);
+//     selectors [11] = {LEDR1, LEDR2, LEDR3, LEDR4, LEDR5, LEDL6, LEDL5, LEDL4, LEDL3, LEDL2, LEDL1};
+//   return(selectors[result]);
+//  
+//}
 
 void setup()
 {
@@ -82,7 +94,6 @@ void loop()
   delay(loopspeed);
   digitalWrite(LEDL1, LOW);    // Turn off the LED
 
-
   digitalWrite(LEDL1, HIGH);   // Turn on the LED
   delay(loopspeed);              // Wait for one second
   digitalWrite(LEDL2, HIGH);    // Turn off the LED  
@@ -127,7 +138,24 @@ void loop()
   delay(loopspeed);
   digitalWrite(LEDR1, LOW);    // Turn off the LED
 
-
+  for (int i = 0; i < 10; i++){
+  digitalWrite(LEDL6, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR1, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL1, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL6, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR1, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL1, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  }
 
   digitalWrite(LEDR1, HIGH);   // Turn on the LED
   delay(loopspeed);              // Wait for one second
@@ -172,6 +200,18 @@ void loop()
   digitalWrite(LEDL5, LOW);    // Turn off the LED  
   delay(loopspeed);
   digitalWrite(LEDL6, LOW);    // Turn off the LED
+  delay(loopspeed);
+
+  for (int i = 0; i < 10; i++){
+  digitalWrite(LEDL6, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL6, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  }
 
   digitalWrite(LEDL6, HIGH);   // Turn on the LED
   delay(loopspeed);              // Wait for one second
@@ -217,17 +257,116 @@ void loop()
   delay(loopspeed);
   digitalWrite(LEDL1, LOW);    // Turn off the LED  
   delay(loopspeed);
+  for (int i = 0; i < 10; i++){
+  digitalWrite(LEDR1, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL1, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR1, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL1, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  }
+
+  //for (int i = 0; i < 10; i++){
+  digitalWrite(LEDR1, HIGH);   // Turn on the LED
+  delay(loopspeed);              // Wait for one second
+  digitalWrite(LEDR1, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR2, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR2, LOW);   // Turn on the LED
+  delay(loopspeed);              // Wait for one second
+  digitalWrite(LEDR3, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR3, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR4, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR4, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL6, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL6, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL5, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL5, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL4, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL4, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL3, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL3, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL2, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL2, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL1, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL1, LOW);    // Turn off the LED 
+  delay(loopspeed);
+  digitalWrite(LEDL1, HIGH);   // Turn on the LED
+  delay(loopspeed);              // Wait for one second
+  digitalWrite(LEDL1, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL2, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL2, LOW);   // Turn on the LED
+  delay(loopspeed);              // Wait for one second
+  digitalWrite(LEDL3, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL3, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL4, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL4, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL5, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL5, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL6, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDL6, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR5, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR4, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR4, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR3, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR3, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR2, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR2, LOW);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR1, HIGH);    // Turn off the LED  
+  delay(loopspeed);
+  digitalWrite(LEDR1, LOW);    // Turn off the LED
+  //}
+
+  
   delay(0);// Wait for one second
 }
 
 /* 
  / Try changing the 1000 in the above delay() functions to
  / different numbers and see how it affects the timing. Smaller
- / values will make the loop run faster. (Why?)
- /
- / Other challenges:
+ / values will make the loop run faster. 
  /   * Decrease the delay to 10 ms. Can you still see it blink?
  /         Find the smallest delay that you can still see a blink. What is this frequency?
  /   * Modify the code above to resemble a heartbeat.  
  */
-
