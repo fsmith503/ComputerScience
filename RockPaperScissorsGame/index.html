@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors</title>
+	<!-- Bootstrap Scripts -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<!-- My Scripts -->
+	<link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+	<h4>ULTIMATE</h4>
+	<h1>ROCK! PAPER! SCISSORS!</h1>
+	<hr>
+	<h4 class="text-center" id="scoreheader">SCORE</h4>
+	<div id="scoreboard">
+		<div id="playerboard">
+			<p class="playertitle text-center">PLAYER 1</p>
+			<p class="text-center" id="playerscore"><span>0</span></p>
+		</div>
+		<div id='restart'>
+			<button class='btn' id='newgame'>RESET</button>
+		</div>
+		<div id="compboard">
+			<p class="playertitle text-center">COMPUTER</p>
+			<p class="text-center" id="compscore"><span>0</span></p>
+		</div>
+	</div>
+	<div id="score">
+		
+	</div>
+	<div id="field">
+		<div id="player">
+			<div id=img-div>
+				<img class="img-fluid playeritem" src="" alt="">
+			</div>
+		</div>
+		<div id="comp">
+			<div id=img-div>
+				<img class="img-fluid compitem" src="" alt="">
+			</div>
+		</div>
+	</div>
+	<div id="buttons">
+		<div id="innerbtns">
+			<button class="btn" id="rockbtn"><span>ROCK</span></button>
+			<button class="btn" id="paperbtn"><span>PAPER</span></button>
+			<button class="btn" id="scissorsbtn"><span>SCISSORS</span></button>
+		</div>
+	</div>
+	<!-- Bootstrap Scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <!-- My Script -->
+    <script src="assets/scripts/scripts.js"></script>
+</body>
+</html>

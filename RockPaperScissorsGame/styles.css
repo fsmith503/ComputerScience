@@ -1,0 +1,131 @@
+:root{
+	--weebly: #ff9a00;
+	--whisper: #e6e6e6;
+	--nero: #1c1c1c;
+}
+html, body{
+	width: 100%;
+}
+body{
+	height: 100vh;
+	background: linear-gradient(45deg, #ff9a00, #ff7400);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 1rem;
+}
+h4{
+	margin-top: 2rem;
+}
+h4, h1{
+	text-align: center;
+	font-weight: bold;
+}
+#scoreheader{
+	margin-top: 1rem;
+}
+#scoreboard{
+	margin-top: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+	align-items: center;
+	justify-content: center;
+}
+#field{
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	align-items: center;
+	justify-content: center;
+}
+.playertitle{
+	color: var(--nero);
+	background: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0;
+	width: 100%;
+}
+#compboard, #playerboard{
+	height: 6rem;
+	width: 6rem;
+	padding: 0;
+	margin: 0 auto;
+	background-color: var(--nero);
+}
+#compscore, #playerscore{
+	color: #fff;
+	font-size: 4rem;
+	margin-top: -50%;
+	transform: translateY(15%);
+	padding: 0;
+}
+#score, .btn{
+	width: 96px;
+	border-radius: 2px;
+	font-weight: 600;
+	background-color: var(--nero);
+	color: #fff;
+	outline: none;
+}
+.btn:hover{
+	background-color: #fff;
+	color: var(--nero);
+}
+#newgame{
+	width: 100%;
+	background-color: #ff0000;
+	font-weight: 600;
+	margin: .1rem 0rem;
+}
+#newgame:hover{
+	color: #ff0000;
+	background: #fff;
+}
+#player, #comp{
+	height: 10rem;
+	width: 100%;
+}
+#player, #comp{
+	border-right: 1px solid var(--nero);
+	border-left: 1px solid var(--nero);
+}
+#img-div{
+	width: 100%;
+	padding: 1rem 2rem 1rem 3.8rem;
+}
+.playeritem, .compitem{
+	margin: 0 auto;
+	height: 10rem;
+	width: auto;
+}
+#buttons{
+	margin-top: 1rem;
+}
+@keyframes tiltitem{
+	0%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(-10px);
+	}
+}
+.winner{
+	animation: tiltitem .7s ease-in infinite;
+}
+@keyframes match{
+	0%{
+		margin-left: -10px;
+	}
+	100%{
+		margin-left: 10px;
+	}
+}
+.wonmatch{
+	animation: match .7s ease-in infinite;
+	text-align: center;
+	font-weight: 700;
+}
+
