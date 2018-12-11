@@ -5,6 +5,7 @@ Author: Joe Sventek, 11-13 November 2015, minor modifications
 
 terminal call
 $ python3 sudoku.py board1.txt
+franklinsmith$ python3 sudoku.py --display 01-hs2-board.txt
 
 
 Overall application control (including instantiation of 
