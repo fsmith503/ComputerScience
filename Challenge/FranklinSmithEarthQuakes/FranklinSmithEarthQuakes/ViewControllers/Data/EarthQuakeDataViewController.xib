@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EarthQuakeDataViewController" customModule="FranklinSmithEarthQuakes" customModuleProvider="target">
+            <connections>
+                <outlet property="DateLabel" destination="0p3-Wa-tna" id="Is6-32-opU"/>
+                <outlet property="DateSelector" destination="yWJ-Ot-6OS" id="Rfl-iR-v15"/>
+                <outlet property="EarthQuaketableView" destination="cwq-Fy-tdw" id="GCl-p2-7Xp"/>
+                <outlet property="backButton" destination="w4e-Jr-Fna" id="T9s-9I-WjG"/>
+                <outlet property="displayLabel" destination="iAb-RD-ffD" id="CPs-83-AJ4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cwq-Fy-tdw">
+                    <rect key="frame" x="0.0" y="309" width="414" height="553"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ubb-Av-5Ba"/>
+                        <outlet property="delegate" destination="-1" id="pZ7-iu-d7Q"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Earth Quake Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScC-Yi-vIi">
+                    <rect key="frame" x="140" y="67" width="135" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4e-Jr-Fna">
+                    <rect key="frame" x="22" y="62" width="75" height="33"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="wY4-l0-qLm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p3-Wa-tna">
+                    <rect key="frame" x="179" y="193" width="56" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="TIE-kH-49B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="yWJ-Ot-6OS">
+                    <rect key="frame" x="34" y="247" width="346" height="30"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="p0A-d1-B58"/>
+                    </constraints>
+                    <connections>
+                        <action selector="slider:" destination="-1" eventType="valueChanged" id="hJy-F6-Kv0"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a number of previous days of which you would like to view Earth Quakes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAb-RD-ffD">
+                    <rect key="frame" x="39" y="103" width="336" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="CaH-bE-17o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="w4e-Jr-Fna" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="3Sw-Ol-fbp"/>
+                <constraint firstItem="0p3-Wa-tna" firstAttribute="top" secondItem="iAb-RD-ffD" secondAttribute="bottom" constant="25" id="4Li-YH-IHW"/>
+                <constraint firstItem="yWJ-Ot-6OS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="A0o-tm-HJ0"/>
+                <constraint firstItem="ScC-Yi-vIi" firstAttribute="centerX" secondItem="iAb-RD-ffD" secondAttribute="centerX" id="Akz-Wk-nCm"/>
+                <constraint firstItem="w4e-Jr-Fna" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="BVv-sG-orW"/>
+                <constraint firstItem="ScC-Yi-vIi" firstAttribute="leading" secondItem="w4e-Jr-Fna" secondAttribute="trailing" constant="43" id="BiI-uM-8hu"/>
+                <constraint firstItem="ScC-Yi-vIi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="23" id="EeR-dA-ldo"/>
+                <constraint firstItem="0p3-Wa-tna" firstAttribute="centerX" secondItem="yWJ-Ot-6OS" secondAttribute="centerX" id="FGy-B9-OOy"/>
+                <constraint firstItem="iAb-RD-ffD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="JpJ-mi-MtA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ScC-Yi-vIi" secondAttribute="trailing" constant="139" id="Nd7-ET-Czv"/>
+                <constraint firstItem="0p3-Wa-tna" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="179" id="Nnb-zC-DXc"/>
+                <constraint firstItem="cwq-Fy-tdw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xyj-Y3-BDU"/>
+                <constraint firstItem="ScC-Yi-vIi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZFH-ab-XIH"/>
+                <constraint firstItem="yWJ-Ot-6OS" firstAttribute="top" secondItem="0p3-Wa-tna" secondAttribute="bottom" constant="30" id="cVc-Q2-dpY"/>
+                <constraint firstAttribute="trailing" secondItem="cwq-Fy-tdw" secondAttribute="trailing" id="fRZ-Bi-HrT"/>
+                <constraint firstItem="cwq-Fy-tdw" firstAttribute="top" secondItem="yWJ-Ot-6OS" secondAttribute="bottom" constant="33" id="hKY-MR-riv"/>
+                <constraint firstItem="iAb-RD-ffD" firstAttribute="top" secondItem="w4e-Jr-Fna" secondAttribute="bottom" constant="8" symbolic="YES" id="jKN-Wj-lp6"/>
+                <constraint firstItem="yWJ-Ot-6OS" firstAttribute="centerX" secondItem="cwq-Fy-tdw" secondAttribute="centerX" id="n0h-dX-1Fj"/>
+                <constraint firstItem="iAb-RD-ffD" firstAttribute="top" secondItem="ScC-Yi-vIi" secondAttribute="bottom" constant="15" id="v2I-m0-ufj"/>
+                <constraint firstItem="iAb-RD-ffD" firstAttribute="centerX" secondItem="0p3-Wa-tna" secondAttribute="centerX" id="w6v-fu-wan"/>
+                <constraint firstItem="cwq-Fy-tdw" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yIX-j9-ELD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="52.173913043478265" y="47.544642857142854"/>
+        </view>
+    </objects>
+</document>
