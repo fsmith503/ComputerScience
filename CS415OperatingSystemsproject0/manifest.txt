@@ -1,0 +1,5 @@
+fsmith4/anagram.c
+fsmith4/main.c
+fsmith4/anagram.h
+fsmith4/Makefile
+fsmith4/report.txt

@@ -1,0 +1,10 @@
+fsmith4/easy.txt
+fsmith4/headerProject1.h
+fsmith4/Makefile
+fsmith4/part1.c
+fsmith4/part2.c
+fsmith4/part3.c
+fsmith4/part4.c
+fsmith4/report.txt
+fsmith4/sample.txt
+fsmith4/workload.txt

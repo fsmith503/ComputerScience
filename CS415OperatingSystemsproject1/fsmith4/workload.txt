@@ -1,0 +1,15 @@
+ls -a
+echo "Hello World1"
+./tester 5
+bad program
+sleep 0
+ls -a
+echo "Hello World2"
+./tester 6
+bad program
+sleep 0
+ls -a
+echo "Hello World3"
+./tester 7
+bad program
+sleep 0

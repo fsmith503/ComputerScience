@@ -1,0 +1,53 @@
+The state of my solution is great, it compiles and runs on arch linux,
+and can handle all of the input and output specifications of the project.
+I have a working submission. My project compiles, links, and runs correctly.
+My code works correctly on the virtual machine under virtual box. I have tested the 
+code on virtual machine before submission.
+
+I ran my project with the following commands:
+$ make clean
+$ make
+$ ./part1 sample.txt 
+$ ./part2 sample.txt 
+$ ./part3 sample.txt 
+$ ./part4 sample.txt 
+$ valgrind ./part1 sample.txt 
+$ valgrind ./part2 sample.txt 
+$ valgrind ./part3 sample.txt 
+$ valgrind ./part4 sample.txt 
+$ ./iobound -minutes 2
+$ ./iobound -cycles 17583 -minutes 2
+$ sh badtest.sh 1
+$ sh badtest.sh 2
+$ sh badtest.sh 3
+$ sh badtest.sh 4
+$ sh goodtest.sh 1
+$ sh goodtest.sh 2
+$ sh goodtest.sh 3
+$ sh goodtest.sh 4
+$ sh valtest.sh 1
+$ sh valtest.sh 2
+$ sh valtest.sh 3
+$ sh valtest.sh 4
+$ ./part1 workload.txt 
+$ ./part2 workload.txt 
+$ ./part3 workload.txt 
+$ ./part4 workload.txt 
+$ valgrind ./part1 workload.txt 
+$ valgrind ./part2 workload.txt 
+$ valgrind ./part3 workload.txt 
+$ valgrind ./part4 workload.txt 
+$ ./part1 easy.txt 
+$ ./part2 easy.txt 
+$ ./part3 easy.txt 
+$ ./part4 easy.txt 
+$ valgrind ./part1 easy.txt 
+$ valgrind ./part2 easy.txt 
+$ valgrind ./part3 easy.txt 
+$ valgrind ./part4 easy.txt 
+
+
+
+
+
+  

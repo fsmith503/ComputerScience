@@ -1,0 +1,7 @@
+The state of my solution is great, it compiles and runs,
+and can handle all of the input and output specifications of the project.
+
+I ran my project with the following commands:
+$ ./anagram 
+$ ./anagram A.dict
+$ ./anagram A.dict test.out

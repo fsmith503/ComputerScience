@@ -1,0 +1,101 @@
+this command worked
+a.out
+badtest.sh
+cpubound.c
+easy.txt
+git.sh
+goodtest.sh
+headerProject1.h
+iobound.c
+Makefile
+part1
+part1.c
+part1.o
+part2
+part2.c
+part2.o
+part3
+part3.c
+part3.o
+part4
+part4.c
+part4.o
+report.log
+sample.txt
+tester.c
+valtest.sh
+workload.txt
+/home/cis415/Desktop/uoregon-cis415/project1
+total 292
+drwxr-xr-x 2 cis415 cis415  4096 May  8 23:56 .
+drwxr-xr-x 6 cis415 cis415  4096 Apr 19 08:29 ..
+-rwxr-xr-x 1 cis415 cis415 10240 May  3 20:52 a.out
+-rw-r--r-- 1 cis415 cis415   157 May  8 18:53 badtest.sh
+-rw-r--r-- 1 cis415 cis415  4356 May  8 18:53 cpubound.c
+-rw-r--r-- 1 cis415 cis415    56 May  8 18:53 easy.txt
+-rw-r--r-- 1 cis415 cis415    99 May  3 14:33 git.sh
+-rw-r--r-- 1 cis415 cis415   143 May  8 18:53 goodtest.sh
+-rw-r--r-- 1 cis415 cis415   526 May  3 20:49 headerProject1.h
+-rw-r--r-- 1 cis415 cis415  4655 May  8 18:53 iobound.c
+-rw-r--r-- 1 cis415 cis415   524 May  8 18:46 Makefile
+-rwxr-xr-x 1 cis415 cis415 15552 May  8 23:56 part1
+-rw-r--r-- 1 cis415 cis415  5316 May  6 10:28 part1.c
+-rw-r--r-- 1 cis415 cis415 14360 May  8 23:56 part1.o
+-rwxr-xr-x 1 cis415 cis415 16528 May  8 23:56 part2
+-rw-r--r-- 1 cis415 cis415  8622 May  3 14:30 part2.c
+-rw-r--r-- 1 cis415 cis415 15696 May  8 23:56 part2.o
+-rwxr-xr-x 1 cis415 cis415 21616 May  8 23:56 part3
+-rw-r--r-- 1 cis415 cis415 13090 May  8 23:56 part3.c
+-rw-r--r-- 1 cis415 cis415 23096 May  8 23:56 part3.o
+-rwxr-xr-x 1 cis415 cis415 21528 May  8 23:56 part4
+-rw-r--r-- 1 cis415 cis415 11711 May  8 22:39 part4.c
+-rw-r--r-- 1 cis415 cis415 22112 May  8 23:56 part4.o
+-rw-r--r-- 1 cis415 cis415   300 May  8 23:56 report.log
+-rw-r--r-- 1 cis415 cis415    39 Apr 26 10:32 sample.txt
+-rw-r--r-- 1 cis415 cis415   457 May  8 18:53 tester.c
+-rw-r--r-- 1 cis415 cis415   111 May  8 18:53 valtest.sh
+-rw-r--r-- 1 cis415 cis415   171 May  8 18:53 workload.txt
+Main function called
+launch workload function called
+setAlarm function called
+wait on all exit function called 
+sig alrmhandler function called
+CheckIfAllProgramsExitedENUM function called
+the current program is: 1 , the value of the state enum is: 0 
+the current program  being sent SIGUSR 1 is: 1 
+Sig child handler function called
+ the value of child pid has exited is: 3024
+sig alrmhandler function called
+CheckIfAllProgramsExitedENUM function called
+the current program is: 2 , the value of the state enum is: 0 
+the current program  being sent SIGUSR 1 is: 2 
+Sig child handler function called
+ the value of child pid has exited is: 3025
+sig alrmhandler function called
+CheckIfAllProgramsExitedENUM function called
+the current program is: 3 , the value of the state enum is: 0 
+the current program  being sent SIGUSR 1 is: 3 
+Sig child handler function called
+ the value of child pid has exited is: 3026
+sig alrmhandler function called
+CheckIfAllProgramsExitedENUM function called
+the current program is: 0 , the value of the state enum is: 0 
+the current program  being sent SIGUSR 1 is: 0 
+sig alrmhandler function called
+CheckIfAllProgramsExitedENUM function called
+the current program is: 1 , the value of the state enum is: 3 
+the current program is: 2 , the value of the state enum is: 3 
+the current program is: 3 , the value of the state enum is: 3 
+the current program is: 0 , the value of the state enum is: 2 
+the current program  being sent SIGcont is: 0 
+Sig child handler function called
+ the value of child pid has exited is: 3023
+sig alrmhandler function called
+CheckIfAllProgramsExitedENUM function called
+the current program is: 1 , the value of the state enum is: 3 
+the current program is: 2 , the value of the state enum is: 3 
+the current program is: 3 , the value of the state enum is: 3 
+the current program is: 0 , the value of the state enum is: 3 
+the current program is: 1 , the value of the state enum is: 3 
+the current program is: 2 , the value of the state enum is: 3 
+the current program  being sent SIGcont is: 2 

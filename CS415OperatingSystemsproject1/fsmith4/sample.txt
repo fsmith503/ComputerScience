@@ -1,0 +1,4 @@
+ls -al
+echo THIS COMMAND $$$$ WORKED
+ls
+pwd

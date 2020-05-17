@@ -1,0 +1,43 @@
+This file describes the other files contained in this folder.
+
+publisher_example.txt
+    - A sequence of topic entries for publisher to post.
+        line 1 : A topic number
+        line 2 : An image URL
+        line 3 : A caption
+        line 4 : Number of seconds to sleep before reading the next topic entry
+    
+    - The squence repeates, i.e.,   line 5 is the same type as line 1.
+                                    ''   6               ''         2.
+                                    ''   7               ''         3.
+                                    ''   8               ''         4.
+                                    ''   9               ''         1.
+                                        .                           .
+                                        .                           .
+                                        .                           .
+
+subscriber_example.txt
+    - A sequence of topics to subscriber and read posts from.
+        line 1 : A topic number
+        line 2 : Number of seconds to sleep before reading the next topic entry
+
+    - The squence repeates, i.e.,   line 3 is the same type as line 1.
+                                    ''   4               ''         2.
+                                    ''   5               ''         1.
+                                        .                           .
+                                        .                           .
+                                        .                           .
+
+subscriber_example_optput.txt
+    - A sequence of topic numbers, captions, and images which the subscriber has read
+            line 1 : A topic number
+            line 2 : An image URL
+            line 3 : A caption
+        
+    - The squence repeates, i.e.,   line 5 is the same type as line 1.
+                                    ''   6               ''         2.
+                                    ''   7               ''         3.
+                                    ''   8               ''         1.
+                                        .                           .
+                                        .                           .
+                                        .                           .
